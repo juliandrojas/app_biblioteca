@@ -5,7 +5,7 @@ import 'package:app_biblioteca/src/ui/pages/home/pages/controllers/search_book_c
 const Color greenUTS = Color.fromRGBO(203, 212, 36, 1);
 
 class SearchBook extends StatelessWidget {
-  final SearchBookController controllerSearchBook = SearchBookController();
+  final controllerSearchBook = SearchBookController();
 
   @override
   Widget build(BuildContext context) {
