@@ -1,3 +1,6 @@
-const MONGO_CONN_URL =
-    "mongodb+srv://juliandrojas:Yamid6409801@trabajodegrado.eeqg0xm.mongodb.net/?retryWrites=true&w=majority";
-const USER_COLLECTION = "libros"; //Name of collection
+const MONGO_DB_URI =
+    "mongodb+srv://juliandrojas:Yamid6409801@trabajodegrado.eeqg0xm.mongodb.net/biblioteca";
+//user: juliandrojas
+//password: Yamid6409801
+//mongodb+srv://root:12345@clusterestudiantes.tpbkeg1.mongodb.net/Supermercado
+const USER_COLLECTION = "libros";
