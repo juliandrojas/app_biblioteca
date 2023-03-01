@@ -40,7 +40,7 @@ class SearchBook extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: const Text('Alerta'),
+                        title: const Text('Atención'),
                         content: const Text('Ingresa un libro.'),
                         actions: [
                           TextButton(
