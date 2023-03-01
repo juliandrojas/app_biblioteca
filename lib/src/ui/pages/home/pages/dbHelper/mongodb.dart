@@ -12,4 +12,10 @@ class MongoDatabase {
     inspect(db);
     userCollection = db.collection(USER_COLLECTION);
   }
+
+  //Create a function for displaying data
+  static Future<List<Map<String, dynamic>>> getQueryData() async {
+    final data = await userCollection.find().toList();
+    return data;
+  }
 }
