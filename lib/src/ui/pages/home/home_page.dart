@@ -1,7 +1,6 @@
 import 'package:app_biblioteca/src/ui/pages/home/pages/profile.dart';
 import 'package:app_biblioteca/src/ui/pages/home/pages/return_book.dart';
 import 'package:app_biblioteca/src/ui/pages/home/pages/search_book.dart';
-import 'package:app_biblioteca/src/ui/pages/sign_in/sign_in_controller.dart';
 import 'package:flutter/material.dart';
 
 const Color greenUTS = Color.fromRGBO(203, 212, 36, 1);
