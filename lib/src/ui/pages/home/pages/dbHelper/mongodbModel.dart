@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:mongo_dart/mongo_dart.dart';
+
 MongoDBModel welcomeFromJson(String str) =>
     MongoDBModel.fromJson(json.decode(str));
 
@@ -17,22 +19,25 @@ class MongoDBModel {
     required this.editorial,
     required this.categoria,
     required this.descripcion,
+    required this.prestado_a,
   });
 
-  Id id;
+  ObjectId id;
   Object titulo;
   Object autor;
   Object editorial;
   Object categoria;
   Object descripcion;
+  Object prestado_a;
 
   factory MongoDBModel.fromJson(Map<String, dynamic> json) => MongoDBModel(
-        id: Id.fromJson(json["_id"]),
+        id: json["_id"],
         titulo: json["titulo"],
         autor: json["autor"],
         editorial: json["editorial"],
         categoria: json["categoria"],
         descripcion: json["descripcion"],
+        prestado_a: json["prestado_a"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -42,6 +47,7 @@ class MongoDBModel {
         "editorial": editorial,
         "categoria": categoria,
         "descripcion": descripcion,
+        "prestado_a": prestado_a
       };
 }
 
