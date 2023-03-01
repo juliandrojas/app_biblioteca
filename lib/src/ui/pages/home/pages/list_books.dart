@@ -15,24 +15,25 @@ class ListBooks extends StatelessWidget {
         backgroundColor: greenUTS,
       ),
       body: SafeArea(
-          //Using FutureBuilder to fetching data
-          child: FutureBuilder(builder: (context, AsyncSnapshot snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        } else {
-          if (snapshot.hasData) {
-            var totalData = snapshot.data.length;
-            print("Total Data: " + totalData);
-            return Text("Data Found");
-          } else {
-            return const Center(
-              child: Text("No data available"),
-            );
-          }
-        }
-      })),
+        //Using FutureBuilder to fetching data
+        child: FutureBuilder(
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              if (snapshot.hasData) {
+                return const Text("Data Found");
+              } else {
+                return const Center(
+                  child: Text("Data not Found"),
+                );
+              }
+            }
+          },
+        ),
+      ),
     );
     /*Center(
         child: Text(controllerSearchBook.myTextController.text),
