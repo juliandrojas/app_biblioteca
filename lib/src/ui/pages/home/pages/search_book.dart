@@ -56,7 +56,8 @@ class SearchBook extends StatelessWidget {
                 }
                 //Si el controlador NO está vacío
                 if (controllerSearchBook.myTextController.text.isNotEmpty) {
-                  print(controllerSearchBook.myTextController.text);
+                  print("Controlador de libros: " +
+                      controllerSearchBook.myTextController.text);
                   //Navegamos hacia list_books.dart
                   Navigator.push(
                     context,
